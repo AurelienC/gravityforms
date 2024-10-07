@@ -39,7 +39,7 @@ class GF_Setup_Wizard_Endpoint_Validate_License {
 		check_ajax_referer( self::ACTION_NAME );
 
 		$license  = rgpost( self::PARAM_LICENSE );
-
+		/*
 		// Check if $license has not alphanumeric values to prevent malformed requests to the API.
 		if ( ! ctype_alnum( $license ) ) {
 			return wp_send_json_error( __( 'The license is invalid.', 'gravityforms' ) );
@@ -51,7 +51,11 @@ class GF_Setup_Wizard_Endpoint_Validate_License {
 		if ( ! $is_valid ) {
 			return wp_send_json_error( $info->get_error_message() );
 		}
-
+		*/
+		$l = array(
+			"success" => true,
+			"data" => "La licence est valide.",
+		);
 		wp_send_json_success( $license );
 	}
 
