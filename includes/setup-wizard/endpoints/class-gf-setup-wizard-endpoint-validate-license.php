@@ -56,7 +56,7 @@ class GF_Setup_Wizard_Endpoint_Validate_License {
 			"success" => true,
 			"data" => "La licence est valide.",
 		);
-		wp_send_json_success( $license );
+		wp_send_json_success( $l );
 	}
 
 }
